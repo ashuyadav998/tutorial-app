@@ -1,0 +1,135 @@
+.tutorials-page {
+  padding: 3rem 0;
+  min-height: 80vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.page-title {
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: var(--light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.filters-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.search-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  background: var(--darker);
+  color: var(--light);
+  border: 3px solid var(--light);
+  transition: var(--transition);
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.2);
+  z-index: 20;
+}
+
+.search-input::placeholder {
+  color: rgba(234, 234, 234, 0.5);
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.filter-select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  background: var(--darker);
+  color: var(--light);
+  border: 2px solid var(--light);
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: var(--accent);
+  outline: none;
+  z-index: 20;
+}
+
+.results-count {
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.no-results h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.no-results p {
+  color: var(--light);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-section {
+    padding: 1.5rem;
+  }
+}
